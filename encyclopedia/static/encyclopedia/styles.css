@@ -13,7 +13,7 @@ h1 {
 }
 
 textarea {
-    height: 90vh;
+    height: 50vh !important;
     width: 80%;
 }
 
@@ -28,11 +28,18 @@ textarea {
 }
 
 .sidebar {
-    background-color: #f0f0f0;
+    background-color: black;
     height: 100vh;
     padding: 20px;
 }
 
 .sidebar h2 {
     margin-top: 5px;
+}
+#cuerpo {
+    overflow-y: auto;
+}
+.d-flex {
+    width: 100%;
+    gap: 20px;
 }

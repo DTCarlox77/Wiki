@@ -5,12 +5,18 @@
 {% endblock %}
 
 {% block body %}
-    <h1>All Pages</h1>
 
-    <ul>
+<div class="container">
+    <h1>Todas las páginas</h1>
+    <hr>
+    {% for letter, entries in grouped_entries.items %}
+        <h1 class="text-dark">{{ letter }}</h1>
+        <hr>
         {% for entry in entries %}
-            <li>{{ entry }}</li>
+            <a href="{% url 'search' query=entry %}" class="text-dark navbar-toggler p-0">{{ entry }}</a>
+            <hr>
         {% endfor %}
-    </ul>
+    {% endfor %}
+</div>
 
 {% endblock %}

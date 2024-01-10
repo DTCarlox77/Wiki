@@ -1,0 +1,67 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Crear página
+{% endblock %}
+
+{% block body %}
+
+<div class="container">
+    
+    <h1>{% if edicion %}Editar página{% else %}Crea una nueva página{% endif %}</h1>
+    <hr>
+
+    {% if edicion %}
+
+        <form action="{% url 'save_edit' name=titulo %}" method="POST">
+            {% csrf_token %}
+            {% if mensaje %}
+                <div class="alert alert-danger" role="alert">
+                    {{ mensaje }}
+                </div>
+            {% endif %}
+
+            <h4>Título de la página</h4>
+            <input type="text" class="form-control" name="title" value="{% if titulo %}{{ titulo }}{% endif %}" disabled>
+            <br>
+            <h4>Contenido</h4>
+            <textarea name="content" class="form-control" id="exampleFormControlTextarea1">{% if contenido %}{{ contenido }}{% endif %}</textarea>
+            <br>
+            <input type="submit" class="btn btn-outline-primary" value="Guardar cambios"> 
+        </form>
+        <br>
+        <form action="{% url 'search' query=titulo %}" method="POST">
+            {% csrf_token %}
+            <input type="submit" class="btn btn-outline-danger" value="Cancelar"> 
+        </form>
+        <br>
+
+    {% else %}
+
+        <form action="{% url 'new_page' %}" method="POST">
+            {% csrf_token %}
+            {% if mensaje %}
+                <div class="alert alert-danger" role="alert">
+                    {{ mensaje }}
+                </div>
+            {% endif %}
+
+            <h4>Título de la página</h4>
+            <input type="text" class="form-control" name="title" value="{% if titulo %}{{ titulo }}{% endif %}">
+            <br>
+            <h4>Contenido</h4>
+            <textarea name="content" class="form-control" id="exampleFormControlTextarea1" rows="3">{% if contenido %}{{ contenido }}{% endif %}</textarea>
+            <br>    
+            <input type="submit" class="btn btn-outline-primary" value="Crear página"> 
+        </form>
+        <br>
+        <form action="{% url 'index' %}" method="POST">
+            {% csrf_token %}
+            <input type="submit" class="btn btn-outline-danger" value="Cancelar"> 
+        </form>
+        <br>
+
+    {% endif %}
+</div>
+
+{% endblock %}

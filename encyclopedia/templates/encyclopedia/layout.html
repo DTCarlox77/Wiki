@@ -9,29 +9,45 @@
         <link href="{% static 'encyclopedia/styles.css' %}" rel="stylesheet">
     </head>
     <body>
-        <div class="row">
-            <div class="sidebar col-lg-2 col-md-3">
-                <h2>Wiki</h2>
+
+<div class="container-fluid">
+    <div class="row" style="overflow-y: hidden;">
+        <div class="sidebar col-lg-2">
+            <div class="container text-light">
+                <h2 class="text-light">Wiki</h2>
+                <br>
                 <form>
-                    <input class="search" type="text" name="q" placeholder="Search Encyclopedia">
+                    <input class="search form-control" type="text" name="q" placeholder="Search Encyclopedia">
                 </form>
+                <br>
+                <br>
                 <div>
-                    <a href="{% url 'index' %}">Home</a>
+                    <a href="{% url 'index' %}" class="text-light navbar-toggler p-0">Páginas</a>
                 </div>
+                <hr class="bg-secondary">
                 <div>
-                    Create New Page
+                    <a class="text-light navbar-toggler p-0" href="{% url 'new_page' %}">Nueva página</a>
                 </div>
+                <hr class="bg-secondary">
                 <div>
-                    Random Page
+                    <a class="text-light navbar-toggler p-0" href="{% url 'random_page' %}">Página aleatória</a>
                 </div>
                 {% block nav %}
                 {% endblock %}
-            </div>
-            <div class="main col-lg-10 col-md-9">
-                {% block body %}
-                {% endblock %}
+                <br>
+                <br>
+                <h4 class="text-light">Project 1</h4>
+                <h5 class="text-light">CS50W</h5>
+                <p class="text-light">Por: Carlos Adrián Espinosa Luna (DTCarlox77).</p>
             </div>
         </div>
+        <div class="main col-lg-10" id="navbar" style="overflow-y: auto; height: 100vh;">
+            {% block body %}
+            {% endblock %}
+        </div>  
+    </div>    
+</div>
+
 
     </body>
 </html>
