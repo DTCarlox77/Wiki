@@ -41,7 +41,7 @@ def search_form(request):
             else:
                 resultados = []
                 for entrie in entries:
-                    if search in entrie:
+                    if search.lower() in entrie.lower():
                         resultados.append(entrie)
     
     return render(request, 'encyclopedia/search.html', {

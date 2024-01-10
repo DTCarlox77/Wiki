@@ -13,6 +13,7 @@
         <h4>Estos artículos se relacionan a tu búsqueda:</h4>
         {% for resultado in resultados %}
             <a href="{% url 'search' query=resultado %}" class="text-dark navbar-toggler p-0">{{ resultado }}</a>
+            <hr>
         {% endfor %}
     {% endif %}
 </div>
