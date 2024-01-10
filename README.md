@@ -4,7 +4,7 @@
 
 ## Descripción del Proyecto
 
-Bienvenido a Wiki, una enciclopedia en línea diseñada para proporcionar información de manera accesible mediante el uso del lenguaje de marcado Markdown. Este proyecto se centra en la simplicidad y la facilidad de uso, sin utilizar JavaScript, bases de datos ni modelos complejos.
+Bienvenido a Wiki, una enciclopedia en línea diseñada para proporcionar información de manera accesible mediante el uso del lenguaje de marcado Markdown.
 
 ### Características Principales
 
@@ -31,31 +31,50 @@ Bienvenido a Wiki, una enciclopedia en línea diseñada para proporcionar inform
 6. **Página Aleatoria:**
    - Al hacer clic en "Página aleatoria," el usuario accede a una entrada de enciclopedia seleccionada al azar.
 
-### Estructura de Archivos de la Aplicación
+## Video tutorial
 
-- **wiki_md/**: Esta carpeta alberga la aplicación principal.
-   - **templates/**: Contiene las plantillas HTML para la visualización del contenido de la aplicación.
+   **Youtube**: "Próximamente"
+
+## Estructura de Archivos de la Aplicación
+
+- **encyclopedia/**: Esta carpeta alberga la aplicación de Django, configurada como un módulo. La ejecución se realiza desde la ruta raíz a través del archivo `manage.py`.
+
+- **templates/**: Aquí se encuentran las plantillas HTML que posibilitan la visualización del contenido de la aplicación.
+
+- **static/**: Contiene archivos estáticos, como hojas de estilo CSS, fuentes y otros recursos utilizados en las plantillas HTML.
+
+## Archivos del Proyecto
+
+- **wiki/**: Carpeta que contiene el proyecto principal de Django, responsable de gestionar la aplicación "Wiki".
+
+### Implementación Técnica
+
+- La aplicación no requiere de una base de datos, por ende no necesitarás generar migraciones antes de la ejecución.
+- La carpeta entries almacenará los ficheros de extensión markdown, que servirán para mostrar información en las plantillas HTML.
+- El archivo 'util.py' se encarga de la gestión de los ficheros markdown.
 
 ## Instrucciones para Desarrolladores
 
 1. **Configuración del Entorno:**
    - Clona este repositorio.
+   - Configura un entorno virtual y activa.
 
 ```bash
-git clone <URL_DEL_REPOSITORIO>
-cd wiki_md
+python -m venv venv
+source venv/bin/activate  # En sistemas basados en Unix
+venv\Scripts\activate  # En Windows
 ```
 
-2. **Ejecución del Servidor:**
-   - Ejecuta el servidor Django.
+2. **Instalación de Dependencias:**
+   - Instala las dependencias necesarias.
 
 ```bash
-python manage.py runserver
+pip install -r requirements.txt
 ```
 
 3. **Acceso a la Aplicación:**
    - Abre tu navegador y accede a `http://localhost:8000` para utilizar la aplicación.
 
-¡Esperamos que disfrutes utilizando la enciclopedia en línea WikiMD! Si tienes alguna pregunta o necesitas más información, no dudes en contactarnos.
+¡Esperamos que disfrutes utilizando Wiki! Si tienes alguna pregunta o necesitas más información, no dudes en contactarme.
 
-## Hecho por: [Tu Nombre]
+## Hecho por: Carlos Adrián Espinosa Luna.
