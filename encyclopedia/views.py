@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django.views.defaults import page_not_found
 from .util import list_entries, save_entry, get_entry
 import markdown2
 import random
@@ -144,3 +145,7 @@ def random_page(request):
     numero = random.randint(0, len(titulos) - 1)
     
     return redirect('search', query=titulos[numero])
+
+# Página de not found.
+def error_404(request, exception):
+    return page_not_found(request, '404.html')
