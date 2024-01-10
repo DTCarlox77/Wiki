@@ -1,5 +1,7 @@
 # JavaScript
 
+![Javascript](https://dev-updates-uploads.s3.ap-south-1.amazonaws.com/1665673562977-Best%20way%20to%20learn%20javascript.jpg)
+
 JavaScript is a versatile, high-level programming language primarily known for its role in building dynamic and interactive web pages. As a client-side scripting language, JavaScript runs in web browsers, allowing developers to create engaging user interfaces and enhance the overall user experience.
 
 ## Key Features:

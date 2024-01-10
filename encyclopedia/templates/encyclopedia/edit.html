@@ -1,7 +1,7 @@
 {% extends "encyclopedia/layout.html" %}
 
 {% block title %}
-    Crear página
+{% if edicion %}Editar página{% else %}Crea una nueva página{% endif %}
 {% endblock %}
 
 {% block body %}

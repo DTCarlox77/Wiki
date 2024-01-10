@@ -1,0 +1,20 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Resultados de búsqueda
+{% endblock %}
+
+{% block body %}
+
+<div class="container">
+    <h1>No se encontraron resultados para '{{ busqueda }}'</h1>
+    <hr>
+    {% if resultados %}
+        <h4>Estos artículos se relacionan a tu búsqueda:</h4>
+        {% for resultado in resultados %}
+            <a href="{% url 'search' query=resultado %}" class="text-dark navbar-toggler p-0">{{ resultado }}</a>
+        {% endfor %}
+    {% endif %}
+</div>
+
+{% endblock %}

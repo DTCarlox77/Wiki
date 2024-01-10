@@ -1,5 +1,7 @@
 # CSS
 
+![CSS](https://borjaarandavaquero.com/wp-content/uploads/2021/07/que-es-css.jpg)
+
 Cascading Style Sheets (CSS) is a stylesheet language used to describe the presentation and layout of a document written in HTML or XML. CSS enhances the visual presentation of web pages by allowing developers to control the appearance of elements on a webpage.
 
 ## Key Features:
@@ -21,5 +23,3 @@ Cascading Style Sheets (CSS) is a stylesheet language used to describe the prese
 - **Selectors for States:** CSS includes pseudo-classes and pseudo-elements to select and style elements based on their state or position, such as `:hover` or `::before`.
 
 - **Vendor Prefixes:** In dealing with browser compatibility, CSS supports vendor prefixes for experimental or non-standard properties. This ensures that properties work across different browsers.
-
-Mejor guardo en el GitHub.

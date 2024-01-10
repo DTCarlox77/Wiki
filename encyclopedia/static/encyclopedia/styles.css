@@ -43,3 +43,7 @@ textarea {
     width: 100%;
     gap: 20px;
 }
+img {
+    max-width: 50%;
+    border-radius: 20px;
+}

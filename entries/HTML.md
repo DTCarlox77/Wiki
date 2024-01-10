@@ -1,5 +1,7 @@
 # HTML
 
+![HTML](https://borjaarandavaquero.com/wp-content/uploads/2021/07/que-es-html.jpg)
+
 HTML (Hypertext Markup Language) is the standard markup language for creating and designing web pages. It forms the backbone of web content by providing the structure and organization of information. HTML uses a tag-based system to define elements on a page, and these elements can include text, images, links, forms, and more.
 
 ## Key Features:

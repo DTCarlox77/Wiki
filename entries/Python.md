@@ -1,5 +1,7 @@
 # Python
 
+![Python](https://miro.medium.com/v2/resize:fit:1400/1*ycIMlwgwicqlO6PcFRA-Iw.png)
+
 Python is a high-level, interpreted programming language known for its readability and versatility. Guido van Rossum created Python with a focus on code readability and ease of use, making it an excellent choice for beginners and experienced developers alike.
 
 ## Key Features:

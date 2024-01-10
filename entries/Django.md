@@ -1,5 +1,6 @@
 # Django
 
+![Django](https://www.openapp.ie/wp-content/uploads/2015/03/Django.png)
 
 [Django](https://www.djangoproject.com/) is a high-level Python web framework that encourages rapid development and clean, pragmatic design. It follows the Model-View-Controller (MVC) architectural pattern and is designed to make it easy to build web applications by providing reusable code for common tasks.
 

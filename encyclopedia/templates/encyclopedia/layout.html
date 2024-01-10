@@ -16,7 +16,7 @@
             <div class="container text-light">
                 <h2 class="text-light">Wiki</h2>
                 <br>
-                <form>
+                <form action="{% url 'search_form' %}" method="GET">
                     <input class="search form-control" type="text" name="q" placeholder="Search Encyclopedia">
                 </form>
                 <br>
