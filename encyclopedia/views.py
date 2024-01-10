@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from django.views.defaults import page_not_found
+from django.http import Http404
 from .util import list_entries, save_entry, get_entry
 import markdown2
 import random
@@ -53,12 +54,16 @@ def search(request, query):
     
     # Conversión del markdown a HTML.
     busqueda = get_entry(query)
-    html = markdown2.markdown(busqueda)
     
-    return render(request, 'encyclopedia/page.html', {
-        'titulo' : query,
-        'contenido' : html
-    })
+    if busqueda:
+        html = markdown2.markdown(busqueda)
+        
+        return render(request, 'encyclopedia/page.html', {
+            'titulo' : query,
+            'contenido' : html
+        })
+    
+    raise Http404('')
     
 # Edición de páginas posteadas.
 def edit_page(request, name):
