@@ -25,7 +25,7 @@ SECRET_KEY = '%710m*zic)#0u((qugw#1@e^ty!c)9j04956v@ly(_86n$rg)h'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['wiki-rv4i.onrender.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -48,6 +48,16 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+]
+
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost',
+    'https://wiki-rv4i.onrender.com'
+]
+
+CSRF_TRUSTED_ORIGINS = [
+    'http://localhost',
+    'https://wiki-rv4i.onrender.com'
 ]
 
 ROOT_URLCONF = 'wiki.urls'
