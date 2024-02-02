@@ -33,7 +33,7 @@ Bienvenido a Wiki, una enciclopedia en línea diseñada para proporcionar inform
 
 ## Video tutorial
 
-   **Youtube**: "Próximamente"
+   **Youtube**: https://youtu.be/j85BdENs898?si=KDA7LTmlctu6Kkey
 
 ## Estructura de Archivos de la Aplicación
 
