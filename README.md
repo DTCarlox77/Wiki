@@ -72,7 +72,12 @@ venv\Scripts\activate  # En Windows
 pip install -r requirements.txt
 ```
 
-3. **Acceso a la Aplicación:**
+3. **Ejucutar la Aplicación:**
+```bash
+python manage.py runserver
+```
+
+4. **Acceso a la Aplicación:**
    - Abre tu navegador y accede a `http://localhost:8000` para utilizar la aplicación.
 
 ¡Esperamos que disfrutes utilizando Wiki! Si tienes alguna pregunta o necesitas más información, no dudes en contactarme.
